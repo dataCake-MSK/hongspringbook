@@ -13,8 +13,7 @@ public class ArticleForm {
     public String toString() {
         return "ArticleForm{" +
                 "title='" + title + '\'' +
-                ", content='" + content + '\'' +
-                '}';
+                ", content='" + content + '\'' +  '}';
     }
 }
 
