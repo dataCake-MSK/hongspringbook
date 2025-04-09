@@ -1,10 +1,10 @@
-package com.min.springbook250412;
+package com.min.hongspringbook;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Springbook250412ApplicationTests {
+class HongspringbookApplicationTests {
 
 	@Test
 	void contextLoads() {

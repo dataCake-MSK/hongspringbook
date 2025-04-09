@@ -1,13 +1,13 @@
-package com.min.springbook250412;
+package com.min.hongspringbook;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Springbook250412Application {
+public class HongspringbookApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Springbook250412Application.class, args);
+		SpringApplication.run(HongspringbookApplication.class, args);
 	}
 
 }
