@@ -5,6 +5,7 @@ import com.min.hongspringbook.repository.ArticleRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,11 +22,12 @@ public class ArticleController {
     }
 
     @GetMapping("/articles/{id}")
-    public String show(@PathVariable Long id){
+    public String show(@PathVariable Long id, Model model){
         log.info(String.valueOf(id));
         Article articleEntity = articleRepository.findById(id).orElse(null);
         // .orElseGet(() -> new Article()); for default entity
-        return "";
+        model.addAttribute("article", articleEntity);
+        return "articles/show";
     }
 
     @PostMapping("/articles/create")
