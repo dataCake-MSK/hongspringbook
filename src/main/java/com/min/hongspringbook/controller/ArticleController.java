@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
+
 @Slf4j
 @Controller
 public class ArticleController {
@@ -41,8 +43,9 @@ public class ArticleController {
     }
 //
     @GetMapping("/articles")
-    public String index() {
-
+    public String index(Model model) {
+        List<Article> articleEntityList = (List<Article>) articleRepository.findAll();
+        model.addAttribute("articleList", articleEntityList);
         return "articles/index";
     }
 }
