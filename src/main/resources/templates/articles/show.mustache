@@ -5,14 +5,22 @@
     <title>Document</title>
 </head>
 <body>
-{{#article}}
-    <body>
-    <ol>
-        <li>{{id}}</li>
-        <li>{{title}}</li>
-        <li>{{content}}</li>
-    </ol>
-    </body>
-{{/article}}
+<table border="2">
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Content</th>
+    </tr>
+
+    {{#article}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{title}}</td>
+            <td>{{content}}</td>
+        </tr>
+    {{/article}}
+</table>
 </body>
 </html>
+
+

@@ -37,9 +37,14 @@ public class ArticleController {
         log.info(article.toString());
         Article saved = articleRepository.save(article);
         log.info(saved.toString());
-    return "articles/new";
+        return "articles/new";
     }
+//
+    @GetMapping("/articles")
+    public String index() {
 
+        return "articles/index";
+    }
 }
 
 
