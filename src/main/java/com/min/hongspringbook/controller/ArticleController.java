@@ -39,7 +39,7 @@ public class ArticleController {
         log.info(article.toString());
         Article saved = articleRepository.save(article);
         log.info(saved.toString());
-        return "articles/new";
+        return "redirect:/articles/new";
     }
 //
     @GetMapping("/articles")
