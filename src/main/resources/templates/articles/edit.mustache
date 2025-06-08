@@ -5,8 +5,11 @@
     <title>Document</title>
 </head>
 <body>
-<form action="/articles/create" method="post">
+<form action="/articles/update" method="post">
     <h1>Edit Article</h1>
+    <div>Id:</div>
+    <input name = "id" value = "{{article.id}}" readonly>  <!--disabled: id data doesn't get passed to dto-->
+    <br><br>
     <div>Title:</div>
     <input type = "text" name = "title" value={{article.title}}>
     <br><br>
